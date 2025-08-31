@@ -1,0 +1,36 @@
+# Compiled Object Files and Libraries
+*.o
+*.obj
+*.ko
+*.so
+*.a
+*.lib
+*.dll
+
+# Executables
+*.exe
+*.out
+*.bin
+
+# Build Directories
+build/
+bin/
+obj/
+dist/
+
+# Temporary Files
+*~
+*.bak
+*.tmp
+*.log
+
+# Editor/IDE Specific Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.DS_Store
+Thumbs.db
+
+# Dependency management (if applicable, e.g., for embedded projects)
+vendor/
