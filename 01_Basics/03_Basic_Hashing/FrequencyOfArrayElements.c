@@ -4,12 +4,12 @@ int* hashCreation(int arr[], int hashArr[], int n){
     for (int i = 0; i < n; i++){
         hashArr[arr[i]]++;
     }
-    return hashArr[1002];
+    return hashArr[1001];
 }
 
 int frequency(int hashArr[], int query){
     if(query <= 1000) return hashArr[query];
-    else return -1; // no such elemnt is present
+    else return -1; // no such element is present
 }
 
 int main(){
@@ -23,7 +23,7 @@ int main(){
         scanf("%d", &arr[i]);
     }
 
-    int hashArr[1002] = {0}; // hash array defined in main
+    int hashArr[1001] = {0}; // hash array defined in main
     hashCreation(arr, index, hashArr);
 
     int query;

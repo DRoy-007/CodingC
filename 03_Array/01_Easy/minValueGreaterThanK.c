@@ -5,14 +5,14 @@
 
 typedef struct valid{
     int ans;
-    int is_Present;
+    int isPresent;
 } valid;
 
-valid smallest_Number(int arr[], int n, int k, valid* validator){
+valid smallestNumber(int arr[], int n, int k, valid* validator){
     for (int i = 0; i < n; i++){
         if (arr[i] < validator->ans && arr[i] > k){
             validator->ans = arr[i];
-            validator->is_Present = 1;
+            validator->isPresent = 1;
         }
     }
     return *validator;
@@ -34,10 +34,10 @@ int main(){
 
     valid validator;
     validator.ans = INT_MAX;
-    validator.is_Present = 0;
+    validator.isPresent = 0;
 
     smallest_Number(arr, n, k, &validator);
-    if(validator.is_Present) printf("%d", validator.ans);
+    if(validator.isPresent) printf("%d", validator.ans);
     else printf("No valid answer is found.\n");
     return 0;
 }
