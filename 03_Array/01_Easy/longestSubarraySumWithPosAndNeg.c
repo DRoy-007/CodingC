@@ -2,16 +2,20 @@
 #define max(a, b) ((a > b) ? a : b)
 
 int longestSubarraySumWithPosAndNeg(int arr[], int n, int k){
-    int sum = 0, maxLen = 0;
+    int maxLen = 0;
 
     for (int i = 0; i < n; i++){
+        int sum = 0;
+
         for (int j = i; j < n; j++){
             sum += arr[j];
 
-            if (sum == k) maxLen = max(maxLen, j - i + 1);
+            if (sum == k) {
+                maxLen = max(maxLen, j - i + 1);
+            }
         }
-        return maxLen;
     }
+    return maxLen;
 }
 
 int main(){
@@ -29,7 +33,8 @@ int main(){
     printf("Enter the target sum: ");
     scanf("%d", &target);
 
-    printf("The length of largest subarray with the sum equal to %d is: %d\n", target, longestSubarraySumWithPosAndNeg(arr, index, target));
+    printf("The length of largest subarray with the sum equal to %d is: %d\n",
+           target, longestSubarraySumWithPosAndNeg(arr, index, target));
 
     return 0;
 }
