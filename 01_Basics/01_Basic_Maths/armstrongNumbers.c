@@ -15,17 +15,30 @@ int power(int base, int power){
     return ans;
 }
 
+int countDigits(int n){
+    int count;
+    if (n == 0) return 1;
+    if (n < 0) n = -n;
+    
+    while(n>0){
+        n /= 10;
+        count++;
+    }
+
+    return count;
+}
+
 int isAmstrongNumber(int n){
     int num = n;
-    int total_Digits = count_Digits(num);
-    int arm_num = 0;
+    int totalDigits = countDigits(num);
+    int armNum = 0;
         
     while(num != 0){
-        arm_num += Pow((num % 10), total_Digits);
+        armNum += Pow((num % 10), totalDigits);
         num /= 10;
     }
         
-    if (n == arm_num) return 1;
+    if (n == armNum) return 1;
     else return 0;
 }
 
@@ -33,7 +46,7 @@ int main(){
     int n;
     printf("Enter a number: ");
     scanf("%d", &n);
-    if (armstrong_Number(n)) printf("It is an Armstrong Number.\n");
+    if (isArmstrongNumber(n)) printf("It is an Armstrong Number.\n");
     else printf("It is not an Armstrong Number.\n");
 
     return 0;
