@@ -19,8 +19,8 @@ This forces me to not just solve problems, but also understand the building bloc
 ## 🚀 Progress
 
 - ✅ Basics  
-- 🔄️ Arrays (ongoing)  
-- ⏳ Strings (coming soon...)  
+- ✅ Arrays   
+- 🔄️ Strings (ongoing)  
 - ⏳ Linked list (coming soon...)  
 - ⏳ Recursion & beyond (coming soon...)  
 
